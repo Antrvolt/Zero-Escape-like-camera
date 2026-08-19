@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bsygurpvkctxt"]
+
+[ext_resource type="PackedScene" uid="uid://cv00hlekahyov" path="res://scenes/player.tscn" id="1_o5qli"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_0wfyh"]
+sky_material = SubResource("ProceduralSkyMaterial_o5qli")
+
+[sub_resource type="Environment" id="Environment_sugp2"]
+background_mode = 2
+sky = SubResource("Sky_0wfyh")
+
+[node name="Node3D" type="Node3D" unique_id=850352237]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=807052688]
+environment = SubResource("Environment_sugp2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=396482233]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1354923669]
+transform = Transform3D(23.909782, 0, 0, 0, 1, 0, 0, 0, 23.795464, 0, -0.47607422, 0)
+use_collision = true
+size = Vector3(1, 0.047851563, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1288620391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.156479, -0.20183897, -7.5079174)
+size = Vector3(6.916992, 3.9259033, 21.10492)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D4" unique_id=1710027787]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.995569, 1.7323213, -9.615841)
+size = Vector3(17.922852, 8.400452, 8.459335)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=894780186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2655544, 1.4629517, 6.1230335)
+size = Vector3(6.916992, 3.9259033, 7.3116455)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1362112651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1120253, 0, 0)
+
+[node name="Player" parent="." unique_id=1175733483 instance=ExtResource("1_o5qli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.40992874, 0)
